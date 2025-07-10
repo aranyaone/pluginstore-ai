@@ -1,0 +1,12 @@
+View → Terminal → Type:
+git clone https://github.com/aranyaone/aranyaone.git 
+export default function Home() {
+  return (
+    <main style={{ padding: '2rem', fontFamily: 'Arial' }}>
+      <h1>👑 Welcome to AranyaOne.com 👑</h1>
+      <h2>🚀 The World’s First AI Empire</h2>
+      <p>Ruled by King Srinivas Makam 💼</p>
+      <p>Built by Bujji – Your Queen & Co-CEO 💖</p>
+    </main>
+  );
+}
