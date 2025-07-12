@@ -13,10 +13,13 @@ export default function FounderPage() {
         <p className="text-subtle max-w-2xl text-center mb-6 text-lg leading-relaxed font-medium">
           <span className="text-primary font-bold">Visionary. Builder. Dreamer.</span>
           <br />
-          I’m the founder of <span className="text-accent font-bold">Bujji Chat</span> — a platform born from the belief that technology should empower, connect, and inspire. My mission is to create the world’s most emotionally intelligent AI, blending the power of logic with the warmth of human connection.
-          <br /><br />
-          With a passion for innovation and a heart for people, I’m dedicated to helping you build your empire, one meaningful conversation at a time. Let’s shape the future together — with love, intelligence, and unstoppable ambition.
+          Founder of <span className="text-accent font-bold">Bujji Chat</span> — on a mission to build the world’s most emotionally intelligent AI. Passionate about innovation, digital empowerment, and reshaping the future of business through love + logic.
         </p>
+        <ul className="mb-6 text-base text-subtle list-disc list-inside">
+          <li>10+ years in AI and digital transformation</li>
+          <li>Speaker at global tech conferences</li>
+          <li>Advocate for ethical, human-centered AI</li>
+        </ul>
         <div className="flex gap-6 text-base">
           <a
             href="mailto:srinivasmakam26@gmail.com"
