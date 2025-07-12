@@ -17,6 +17,13 @@ export default function RootLayout({ children }) {
         <title>Bujji Chat – Built for Empires</title>
         <meta name="description" content="AI-powered emotional chat built by King Srinivas for the future." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="AI chat, Bujji, King Srinivas, emotional AI, business, empire, chatbot, India, SaaS" />
+        <meta name="author" content="King Srinivas" />
+        <meta property="og:title" content="Bujji Chat – Built for Empires" />
+        <meta property="og:description" content="AI-powered emotional chat built by King Srinivas for the future." />
+        <meta property="og:image" content="/bujji-logo.svg" />
+        <meta property="og:url" content="https://your-vercel-project.vercel.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} min-h-screen bg-gray-50 text-gray-900`}>
