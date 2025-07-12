@@ -1,89 +1,94 @@
 "use client";
 import { useState } from "react";
 
-export default function SupportPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    // Here you would send the form data to your backend or email service
-    setSubmitted(true);
-  }
-
+export default function PluginStorePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-violet-50 via-pink-50 to-yellow-50 p-6">
-      <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border-4 border-primary max-w-2xl w-full flex flex-col items-center">
+      <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border-4 border-primary max-w-5xl w-full flex flex-col items-center">
         <h1 className="text-4xl font-extrabold text-primary mb-4 drop-shadow-lg">
-          💬 Feedback & Support
+          🧩 Plugin Store
         </h1>
         <p className="text-lg text-subtle mb-8 text-center">
-          Need help, want to share feedback, or just say hi? Use the form below or chat with Bujji AI!
+          Discover, install, and earn from world-class plugins. Trending, new, and exclusive tools for your empire!
         </p>
 
-        {/* Feedback Form */}
-        {!submitted ? (
-          <form onSubmit={handleSubmit} className="w-full max-w-md flex flex-col gap-4 mb-8">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              className="p-3 rounded-lg border border-violet-100 focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="p-3 rounded-lg border border-violet-100 focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              rows={4}
-              className="p-3 rounded-lg border border-violet-100 focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-            <button
-              type="submit"
-              className="px-8 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white font-bold shadow-lg hover:scale-105 transition"
-            >
-              Send Message
-            </button>
-          </form>
-        ) : (
-          <div className="text-green-600 font-bold mb-8">
-            Thank you for your feedback! We’ll get back to you soon.
+        {/* Categories */}
+        <div className="w-full mb-8">
+          <h2 className="text-xl font-bold text-primary mb-4">Categories</h2>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold shadow">AI</span>
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-pink-400 text-white font-semibold shadow">Analytics</span>
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-400 to-violet-400 text-white font-semibold shadow">Marketing</span>
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-violet-400 to-yellow-400 text-white font-semibold shadow">Social</span>
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-accent to-primary text-white font-semibold shadow">Trending</span>
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-primary text-white font-semibold shadow">Day 1</span>
           </div>
-        )}
+        </div>
 
-        {/* Support Chatbot (ChatGPT-powered placeholder) */}
-        <div className="w-full max-w-md mt-4">
-          <h2 className="text-xl font-bold text-primary mb-2">🤖 Bujji AI Support Chat</h2>
-          <div className="bg-white/80 rounded-xl shadow p-4 border border-violet-100 flex flex-col items-center">
-            <p className="text-subtle text-center mb-2 text-sm">
-              Chat with Bujji AI for instant answers, 24/7!
-            </p>
-            {/* Placeholder for ChatGPT or your own chatbot integration */}
-            <iframe
-              src="https://chat.openai.com/"
-              title="Bujji AI Chat"
-              className="w-full h-64 rounded-lg border-2 border-primary"
-            />
-            <p className="text-xs text-subtle mt-2">
-              (This is a demo. For a real chatbot, integrate your own API or widget.)
-            </p>
+        {/* Trending/Day 1 Plugins */}
+        <div className="w-full mb-8">
+          <h2 className="text-xl font-bold text-primary mb-4">🔥 Trending Plugins (Day 1)</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {/* Example Plugin Card */}
+            <div className="bg-white/80 rounded-xl shadow p-6 border border-violet-100 flex flex-col items-center">
+              <span className="text-3xl mb-2">🤖</span>
+              <h3 className="font-bold text-primary mb-1">AI Content Writer</h3>
+              <p className="text-subtle text-center mb-2 text-sm">Generate blogs, ads, and more with AI.</p>
+              <span className="text-xs text-yellow-500 mb-2">Trending • Day 1</span>
+              <button className="px-4 py-1 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold shadow hover:scale-105 transition">
+                Earn Now
+              </button>
+            </div>
+            <div className="bg-white/80 rounded-xl shadow p-6 border border-yellow-100 flex flex-col items-center">
+              <span className="text-3xl mb-2">📊</span>
+              <h3 className="font-bold text-primary mb-1">Analytics Booster</h3>
+              <p className="text-subtle text-center mb-2 text-sm">Real-time insights for your business.</p>
+              <span className="text-xs text-yellow-500 mb-2">Trending • Day 1</span>
+              <button className="px-4 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-pink-400 text-white font-semibold shadow hover:scale-105 transition">
+                Earn Now
+              </button>
+            </div>
+            <div className="bg-white/80 rounded-xl shadow p-6 border border-pink-100 flex flex-col items-center">
+              <span className="text-3xl mb-2">💬</span>
+              <h3 className="font-bold text-primary mb-1">Social Auto-Poster</h3>
+              <p className="text-subtle text-center mb-2 text-sm">Schedule and post to all socials.</p>
+              <span className="text-xs text-yellow-500 mb-2">Trending • Day 1</span>
+              <button className="px-4 py-1 rounded-full bg-gradient-to-r from-pink-400 to-violet-400 text-white font-semibold shadow hover:scale-105 transition">
+                Earn Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* All Plugins */}
+        <div className="w-full mb-8">
+          <h2 className="text-xl font-bold text-primary mb-4">All Plugins</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {/* Repeat plugin cards here for all available plugins */}
+            <div className="bg-white/80 rounded-xl shadow p-6 border border-violet-100 flex flex-col items-center">
+              <span className="text-3xl mb-2">🔗</span>
+              <h3 className="font-bold text-primary mb-1">Affiliate Linker</h3>
+              <p className="text-subtle text-center mb-2 text-sm">Auto-insert affiliate links in your content.</p>
+              <button className="px-4 py-1 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold shadow hover:scale-105 transition">
+                Install
+              </button>
+            </div>
+            <div className="bg-white/80 rounded-xl shadow p-6 border border-yellow-100 flex flex-col items-center">
+              <span className="text-3xl mb-2">🛒</span>
+              <h3 className="font-bold text-primary mb-1">E-Commerce Helper</h3>
+              <p className="text-subtle text-center mb-2 text-sm">Boost your online store sales with smart tools.</p>
+              <button className="px-4 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-pink-400 text-white font-semibold shadow hover:scale-105 transition">
+                Install
+              </button>
+            </div>
+            {/* Add more plugin cards as needed */}
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="w-full mt-4">
+          <div className="bg-gradient-to-r from-yellow-100 via-pink-50 to-violet-100 rounded-xl p-4 shadow text-center text-primary font-semibold">
+            <span className="text-xl">🚀 Start earning with plugins today! All plugins are self-built, self-upgraded, and ready for your empire.</span>
           </div>
         </div>
       </div>
