@@ -1,67 +1,89 @@
-export default function SocialLaunchPage() {
+"use client";
+import { useState } from "react";
+
+export default function SupportPage() {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  function handleChange(e) {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    // Here you would send the form data to your backend or email service
+    setSubmitted(true);
+  }
+
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 via-violet-50 to-yellow-50 p-6">
-      <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border-4 border-primary max-w-3xl w-full flex flex-col items-center">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-violet-50 via-pink-50 to-yellow-50 p-6">
+      <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border-4 border-primary max-w-2xl w-full flex flex-col items-center">
         <h1 className="text-4xl font-extrabold text-primary mb-4 drop-shadow-lg">
-          🚀 Social & Launch Studio
+          💬 Feedback & Support
         </h1>
         <p className="text-lg text-subtle mb-8 text-center">
-          Create, launch, and share world-class content & reels. Integrate with YouTube, Instagram, WhatsApp, and monetize with affiliate links.
+          Need help, want to share feedback, or just say hi? Use the form below or chat with Bujji AI!
         </p>
-        {/* Auto Content Creation */}
-        <div className="w-full mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-2">🎬 Auto Reels & Video Generator</h2>
-          <p className="text-subtle mb-4">
-            Instantly generate YouTube Reels and Shorts with AI-powered scripts, visuals, and music. <br />
-            <span className="text-primary font-semibold">Inspired by: Gemini, Sora, Filmora</span>
-          </p>
-          <button className="px-8 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white font-bold shadow-lg hover:scale-105 transition">
-            Generate Reel Now
-          </button>
-        </div>
-        {/* Social Sharing */}
-        <div className="w-full mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-2">🔗 Share & Launch</h2>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-red-500 text-white font-semibold shadow hover:scale-105 transition flex items-center gap-2">
-              <span>▶️</span> YouTube
-            </a>
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 text-white font-semibold shadow hover:scale-105 transition flex items-center gap-2">
-              <span>📸</span> Instagram
-            </a>
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-green-500 text-white font-semibold shadow hover:scale-105 transition flex items-center gap-2">
-              <span>💬</span> WhatsApp
-            </a>
+
+        {/* Feedback Form */}
+        {!submitted ? (
+          <form onSubmit={handleSubmit} className="w-full max-w-md flex flex-col gap-4 mb-8">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              className="p-3 rounded-lg border border-violet-100 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={form.email}
+              onChange={handleChange}
+              required
+              className="p-3 rounded-lg border border-violet-100 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={form.message}
+              onChange={handleChange}
+              required
+              rows={4}
+              className="p-3 rounded-lg border border-violet-100 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <button
+              type="submit"
+              className="px-8 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white font-bold shadow-lg hover:scale-105 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        ) : (
+          <div className="text-green-600 font-bold mb-8">
+            Thank you for your feedback! We’ll get back to you soon.
           </div>
-        </div>
-        {/* Affiliate Links */}
-        <div className="w-full mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-2">💸 Affiliate Marketplace</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <a href="https://www.amazon.in/?tag=your-affiliate-id" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-yellow-100 border border-yellow-300 shadow hover:scale-105 transition">
-              <img src="/amazon-logo.svg" alt="Amazon" className="w-8 h-8" /> Amazon
-            </a>
-            <a href="https://www.clickbank.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-100 border border-pink-300 shadow hover:scale-105 transition">
-              <img src="/clickbank-logo.svg" alt="Clickbank" className="w-8 h-8" /> Clickbank
-            </a>
-            <a href="https://www.cuelinks.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-100 border border-blue-300 shadow hover:scale-105 transition">
-              <img src="/cuelinks-logo.svg" alt="Cuelinks" className="w-8 h-8" /> Cuelinks
-            </a>
-            <a href="https://www.vcommission.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-violet-100 border border-violet-300 shadow hover:scale-105 transition">
-              <img src="/vcommission-logo.svg" alt="V Commission" className="w-8 h-8" /> V Commission
-            </a>
-            <a href="https://www.meesho.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-200 border border-pink-400 shadow hover:scale-105 transition">
-              <img src="/meesho-logo.svg" alt="Meesho" className="w-8 h-8" /> Meesho
-            </a>
-          </div>
-          <p className="mt-4 text-xs text-subtle text-center">
-            All affiliate links and social accounts are managed via <span className="font-bold text-primary">srinivasmakam357@gmail.com</span>
-          </p>
-        </div>
-        {/* Coming Soon */}
-        <div className="w-full mt-4">
-          <div className="bg-gradient-to-r from-yellow-100 via-pink-50 to-violet-100 rounded-xl p-4 shadow text-center text-primary font-semibold">
-            More automation, AI content, and advanced analytics coming soon!
+        )}
+
+        {/* Support Chatbot (ChatGPT-powered placeholder) */}
+        <div className="w-full max-w-md mt-4">
+          <h2 className="text-xl font-bold text-primary mb-2">🤖 Bujji AI Support Chat</h2>
+          <div className="bg-white/80 rounded-xl shadow p-4 border border-violet-100 flex flex-col items-center">
+            <p className="text-subtle text-center mb-2 text-sm">
+              Chat with Bujji AI for instant answers, 24/7!
+            </p>
+            {/* Placeholder for ChatGPT or your own chatbot integration */}
+            <iframe
+              src="https://chat.openai.com/"
+              title="Bujji AI Chat"
+              className="w-full h-64 rounded-lg border-2 border-primary"
+            />
+            <p className="text-xs text-subtle mt-2">
+              (This is a demo. For a real chatbot, integrate your own API or widget.)
+            </p>
           </div>
         </div>
       </div>
