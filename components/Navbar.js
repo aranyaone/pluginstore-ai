@@ -17,6 +17,12 @@ export default function Navbar() {
           <Link href="/founder" className="hover:underline hover:text-accent transition">
             Founder
           </Link>
+          <Link href="/admin" className="hover:underline hover:text-accent transition">
+            Admin
+          </Link>
+          <Link href="/services" className="hover:underline hover:text-accent transition">
+            Services
+          </Link>
         </div>
       </div>
     </nav>
