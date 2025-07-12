@@ -25,6 +25,9 @@ export default function Navbar() {
           <Link href="/services" className="hover:underline hover:text-accent transition">
             Services
           </Link>
+          <Link href="/pricing" className="hover:underline hover:text-accent transition">
+            Pricing
+          </Link>
         </div>
       </div>
     </nav>
