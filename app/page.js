@@ -5,9 +5,9 @@ import { ArrowRight, Globe, Bot, TrendingUp, Crown } from "lucide-react";
 
 export default function Home() {
   return (
-    <main style={{ padding: "2rem", textAlign: "center" }}>
-      <h1>💖 Welcome to Bujji Chat Room 💬</h1>
-      <p>Deployment success! Your empire is live. 🚀</p>
+    <main className="p-10 text-center">
+      <h1 className="text-3xl font-bold text-pink-600">💖 Welcome to Bujji Chat Room 💬</h1>
+      <p className="mt-4 text-gray-700">Deployment success! Your empire is live. 🚀</p>
     </main>
   );
 }
