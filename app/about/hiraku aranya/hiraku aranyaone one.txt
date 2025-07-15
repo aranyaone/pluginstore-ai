@@ -1,0 +1,27 @@
+{
+  "name": "aranyaone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "web": "node index.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('👑 Welcome to AranyaOne – Powered by Bujji AI 💖');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
+});
