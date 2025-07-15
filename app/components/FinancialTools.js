@@ -528,9 +528,9 @@ const FinancialTools = () => {
                       <div>
                         <label className="text-gray-300 text-sm">Market Cap</label>
                         <select className="w-full p-3 bg-slate-600/50 border border-gray-600 rounded-lg text-white">
-                          <option>Large Cap (>$10B)</option>
+                          <option>Large Cap (&gt;$10B)</option>
                           <option>Mid Cap ($2B-$10B)</option>
-                          <option>Small Cap (<$2B)</option>
+                          <option>Small Cap (&lt;$2B)</option>
                         </select>
                       </div>
                       <div>

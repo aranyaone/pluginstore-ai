@@ -1,12 +1,10 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Bot, Zap, Brain, Target, Settings, Download, Upload,
-  Play, Pause, RotateCw, Eye, EyeOff, Users, Crown, Star,
-  Globe, Database, Code, Shield, Clock, CheckCircle, AlertCircle,
-  ArrowRight, ChevronDown, ChevronUp, Plus, Trash2, Copy, Edit,
-  Layers, Cpu, Network, Server, Terminal, Workflow
+  Bot, Target, Settings, Eye, Users, Star,
+  Globe, Database, Code, Shield, CheckCircle, AlertCircle,
+  Workflow
 } from 'lucide-react';
 
 const AIAgentsTools = () => {

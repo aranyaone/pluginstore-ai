@@ -152,7 +152,7 @@ export default function AutoPilotDashboard() {
             <Zap className="w-12 h-12 text-yellow-400 mr-4" />
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Auto-Pilot Dashboard
-            </h2>
+</h1>
           </div>
           <p className="text-gray-300 text-lg md:text-xl max-w-4xl mx-auto mb-6">
             Intelligent system management and optimization running 24/7

@@ -10,7 +10,7 @@ import {
   Wallet, Gift, Award, Trophy, Medal, Diamond, Crown, Star, Sparkles,
   Database, Server, Network, Cpu, Memory, HardDrive, Wifi, Signal,
   MapPin, Calendar, Clock as ClockIcon, Users, UserCheck, UserX,
-  Building, Home, Office, Factory, Store, CreditCard, University, School,
+  Building, Home, Office, Factory, Store, Bank, University, School,
   GraduationCap, BookOpen, Microscope, Flask, TestTube, Atom, Dna,
   Code, Terminal, Laptop, Desktop, Smartphone as Phone, Camera,
   Video, Music, FileText, Image, Archive, Folder, File, Download as DownloadIcon,
@@ -108,7 +108,7 @@ const GlobalTrendAnalyzer = () => {
     {
       id: 'banks',
       name: 'Global Banking',
-      icon: CreditCard,
+      icon: Bank,
       sources: ['JPMorgan', 'Goldman Sachs', 'Morgan Stanley', 'Citigroup', 'Bank of America', 'HSBC'],
       status: 'active',
       lastUpdate: '2 minutes ago'

@@ -1,26 +1,22 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   QrCode, 
   Smartphone, 
   CreditCard, 
   Wallet, 
-  CreditCard, 
   Globe, 
   Download, 
   Share2, 
   Copy, 
   CheckCircle,
-  AlertCircle,
   Loader2,
   Camera,
   Scan,
   X,
-  ChevronDown,
-  ChevronUp,
-  Settings,
-  RefreshCw
+  RefreshCw,
+  Bank
 } from 'lucide-react';
 
 const QRPaymentSystem = () => {
@@ -36,8 +32,6 @@ const QRPaymentSystem = () => {
   const [showQR, setShowQR] = useState(false);
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState('generate');
-  const videoRef = useRef(null);
-  const canvasRef = useRef(null);
 
   // World countries with their currencies and payment methods
   const countries = {
@@ -162,13 +156,7 @@ const QRPaymentSystem = () => {
   };
 
   const downloadQR = () => {
-    const canvas = canvasRef.current;
-    if (canvas) {
-      const link = document.createElement('a');
-      link.download = `qr-payment-${Date.now()}.png`;
-      link.href = canvas.toDataURL();
-      link.click();
-    }
+    // Download QR functionality removed: canvasRef is no longer used
   };
 
   const shareQR = async () => {
@@ -190,14 +178,7 @@ const QRPaymentSystem = () => {
   const startScanning = () => {
     setIsScanning(true);
     setActiveTab('scan');
-    
-    // Simulate camera access
-    setTimeout(() => {
-      if (videoRef.current) {
-        // In real implementation, this would access the device camera
-        console.log('Camera access requested');
-      }
-    }, 1000);
+    // Simulate camera access (functionality removed: videoRef is no longer used)
   };
 
   const stopScanning = () => {
@@ -423,17 +404,10 @@ const QRPaymentSystem = () => {
                     </h3>
                     
                     <div className="bg-white rounded-2xl p-8 flex justify-center mb-6">
-                      <canvas
-                        ref={canvasRef}
-                        width="200"
-                        height="200"
-                        className="border-2 border-gray-200 rounded-xl"
-                      >
-                        {/* QR Code would be rendered here */}
-                        <div className="w-full h-full flex items-center justify-center text-gray-500">
-                          QR Code Generated
-                        </div>
-                      </canvas>
+                      {/* QR Code would be rendered here (canvas removed) */}
+                      <div className="w-48 h-48 flex items-center justify-center text-gray-500 border-2 border-gray-200 rounded-xl bg-white">
+                        QR Code Generated
+                      </div>
                     </div>
 
                     <div className="space-y-4">
@@ -535,12 +509,7 @@ const QRPaymentSystem = () => {
                 ) : (
                   <div className="space-y-6">
                     <div className="relative bg-black rounded-2xl overflow-hidden">
-                      <video
-                        ref={videoRef}
-                        className="w-full h-64 object-cover"
-                        autoPlay
-                        playsInline
-                      />
+                    {/* Video element removed: videoRef is no longer used */}
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="border-2 border-blue-400 rounded-lg w-48 h-48 relative">
                           <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-blue-400"></div>
