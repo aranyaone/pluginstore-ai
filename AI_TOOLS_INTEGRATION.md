@@ -397,3 +397,47 @@ class DebugTools {
 - **Quarterly**: Major system upgrades
 
 This AI Tools Suite represents the cutting edge of self-operating, intelligent software systems, providing users with powerful tools that continuously improve and adapt to their needs. 
+
+This means there is a **critical React error** in your `/tools` page code. The minified error message doesn’t show the exact cause, but here’s how to debug and fix it:
+
+---
+
+## **How to Fix the `/tools` Page Error**
+
+### 1. **Check Your `/tools` Page Code**
+- Open `app/tools/page.js` (or wherever your `/tools` route is defined).
+
+### 2. **Common Causes for React Error #130**
+- Returning an object instead of a valid React element from your component.
+- Forgetting to export a default function/component.
+- Importing a component that does not exist or is not exported correctly.
+- Using a hook or context outside of a provider.
+
+### 3. **What to Look For**
+- Make sure your file looks like this:
+  ```jsx
+  export default function ToolsPage() {
+    return (
+      <main>
+        <h1>Tools Page</h1>
+        {/* Your tools UI here */}
+      </main>
+    );
+  }
+  ```
+- **Do not** return plain objects, arrays, or non-React elements at the top level.
+
+### 4. **Check for Broken Imports**
+- If you import components, make sure the file paths and export names are correct.
+- If you recently renamed or deleted a component, update the import.
+
+### 5. **If You’re Unsure, Paste Your Code Here**
+- Copy the contents of `app/tools/page.js` and paste it here.
+- I’ll review and tell you exactly what to fix.
+
+---
+
+### **Next Step:**
+- Please copy and paste your `app/tools/page.js` code here, or let me know if you want a safe starter template for this page.
+
+Once I see your code, I’ll give you the exact fix! 
