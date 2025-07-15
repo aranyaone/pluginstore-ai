@@ -6,7 +6,7 @@ import {
   Smartphone, 
   CreditCard, 
   Wallet, 
-  Bank, 
+  CreditCard, 
   Globe, 
   Download, 
   Share2, 

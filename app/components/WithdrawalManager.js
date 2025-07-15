@@ -16,7 +16,7 @@ import {
   Calendar,
   DollarSign,
   CreditCard,
-  Bank,
+  CreditCard,
   Building,
   Bitcoin,
   Ethereum,
@@ -258,7 +258,7 @@ const WithdrawalManager = () => {
   ]);
 
   const [withdrawalMethods] = useState([
-    { id: 'bank', name: 'Bank Transfer', icon: Bank, fee: 0.25, time: '1-3 business days', minAmount: 100, maxAmount: 100000 },
+    { id: 'bank', name: 'Bank Transfer', icon: CreditCard, fee: 0.25, time: '1-3 business days', minAmount: 100, maxAmount: 100000 },
     { id: 'wire', name: 'Wire Transfer', icon: Building, fee: 0.50, time: 'Same day', minAmount: 1000, maxAmount: 500000 },
     { id: 'paypal', name: 'PayPal', icon: CreditCard, fee: 0.30, time: 'Instant', minAmount: 10, maxAmount: 10000 },
     { id: 'crypto', name: 'Cryptocurrency', icon: Bitcoin, fee: 0.10, time: '10-30 minutes', minAmount: 50, maxAmount: 100000 },

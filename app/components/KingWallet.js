@@ -10,7 +10,7 @@ import {
   Download,
   Upload,
   CreditCard,
-  Bank,
+  CreditCard,
   Globe,
   Shield,
   Lock,
@@ -157,7 +157,7 @@ const KingWallet = () => {
   });
 
   const [withdrawalMethods] = useState([
-    { id: 'bank', name: 'Bank Transfer', icon: Bank, fee: 0.25, time: '1-3 business days' },
+    { id: 'bank', name: 'Bank Transfer', icon: CreditCard, fee: 0.25, time: '1-3 business days' },
     { id: 'wire', name: 'Wire Transfer', icon: Building, fee: 0.50, time: 'Same day' },
     { id: 'paypal', name: 'PayPal', icon: CreditCard, fee: 0.30, time: 'Instant' },
     { id: 'crypto', name: 'Cryptocurrency', icon: Bitcoin, fee: 0.10, time: '10-30 minutes' },

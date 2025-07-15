@@ -168,7 +168,7 @@ const ToolPage = ({
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-gray-300">Support Response</span>
-                         <span className="text-yellow-400 font-semibold">{"< 2 hours"}</span>
+                        <span className="text-yellow-400 font-semibold">< 2 hours</span>
                       </div>
                     </div>
                   </div>

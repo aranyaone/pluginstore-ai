@@ -6,7 +6,7 @@ import {
   Play, Pause, RotateCw, Eye, EyeOff, Users, Crown, Star,
   Globe, Database, Code, Shield, Clock, CheckCircle, AlertCircle,
   ArrowRight, ChevronDown, ChevronUp, Plus, Trash2, Copy, Edit,
-  Layers, Cpu, Network, Server, Terminal, Workflow, Automation
+  Layers, Cpu, Network, Server, Terminal, Workflow
 } from 'lucide-react';
 
 const AIAgentsTools = () => {
@@ -25,7 +25,7 @@ const AIAgentsTools = () => {
 
   const tabs = [
     { id: 'agents', name: 'AI Agents', icon: Bot },
-    { id: 'automation', name: 'Automation', icon: Automation },
+    { id: 'automation', name: 'Automation', icon: Workflow },
     { id: 'tasks', name: 'Task Manager', icon: Target },
     { id: 'monitoring', name: 'Monitoring', icon: Eye },
     { id: 'settings', name: 'Settings', icon: Settings }
