@@ -1,343 +1,282 @@
 "use client";
-import { motion } from 'framer-motion';
-import { 
-  Crown, Award, Globe, Heart, Zap, Brain, 
-  Users, Target, Star, Rocket, Lightbulb, 
-  Linkedin, Twitter, Github, Mail, Phone
-} from 'lucide-react';
+import { Crown, Quote, Award, BookOpen, Lightbulb, Target, Users, TrendingUp, Globe, Heart, Star, CheckCircle } from 'lucide-react';
 
 export default function FounderPage() {
-  const achievements = [
-    {
-      icon: Award,
-      title: "AI Pioneer",
-      description: "Leading the development of emotionally intelligent AI systems"
-    },
-    {
-      icon: Globe,
-      title: "Global Vision",
-      description: "Building AI solutions that serve humanity worldwide"
-    },
-    {
-      icon: Heart,
-      title: "Empathy First",
-      description: "Creating AI that understands and responds to human emotions"
-    },
-    {
-      icon: Zap,
-      title: "Innovation Leader",
-      description: "Pushing boundaries in AI technology and user experience"
-    }
-  ];
-
-  const vision = [
-    {
-      icon: Brain,
-      title: "Emotional Intelligence",
-      description: "AI that understands context, emotions, and human psychology"
-    },
-    {
-      icon: Users,
-      title: "Human-Centered Design",
-      description: "Technology that serves and enhances human capabilities"
-    },
-    {
-      icon: Target,
-      title: "Empire Building",
-      description: "Empowering individuals to build their digital empires"
-    },
-    {
-      icon: Star,
-      title: "Excellence",
-      description: "Striving for world-class quality in everything we do"
-    }
-  ];
-
-  const timeline = [
-    {
-      year: "2024",
-      title: "Bujji Chat Launch",
-      description: "Launched the world's most emotionally intelligent AI chat platform"
-    },
-    {
-      year: "2023",
-      title: "AI Research Breakthrough",
-      description: "Developed advanced emotional intelligence algorithms and neural networks"
-    },
-    {
-      year: "2022",
-      title: "Company Founded",
-      description: "Founded Bujji Chat with a vision to democratize AI technology"
-    },
-    {
-      year: "2021",
-      title: "Vision Conceived",
-      description: "The idea of emotional AI was born during deep research into human-AI interaction"
-    },
-    {
-      year: "2020",
-      title: "AI Journey Begins",
-      description: "Started exploring AI technology and its potential to enhance human life"
-    }
-  ];
-
-  const socialLinks = [
-    { icon: Linkedin, url: "#", label: "LinkedIn" },
-    { icon: Twitter, url: "#", label: "Twitter" },
-    { icon: Github, url: "#", label: "GitHub" },
-    { icon: Mail, url: "mailto:king@bujjichat.com", label: "Email" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center justify-center mb-6">
-              <Crown className="w-16 h-16 text-yellow-400 mr-4" />
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                King Srinivas
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center px-6 py-3 mb-8 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-full shadow-xl">
+                <Crown className="w-5 h-5 mr-2" />
+                <span className="text-sm font-semibold">Meet the Visionary</span>
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-gray-900 via-orange-800 to-gray-900 bg-clip-text text-transparent">
+                  King Srinivas
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 bg-clip-text text-transparent">
+                  Makam
+                </span>
               </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                Founder & Visionary Leader of Bujji Empire
+              </p>
+              
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                A visionary entrepreneur and AI pioneer who founded Bujji Empire with the mission 
+                to democratize artificial intelligence and empower businesses worldwide through 
+                innovative technology solutions.
+              </p>
+              
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center px-4 py-2 bg-orange-100 rounded-full">
+                  <Award className="w-5 h-5 text-orange-600 mr-2" />
+                  <span className="text-orange-800 font-medium">AI Innovator</span>
+                </div>
+                <div className="flex items-center px-4 py-2 bg-red-100 rounded-full">
+                  <Users className="w-5 h-5 text-red-600 mr-2" />
+                  <span className="text-red-800 font-medium">Thought Leader</span>
+                </div>
+                <div className="flex items-center px-4 py-2 bg-yellow-100 rounded-full">
+                  <Crown className="w-5 h-5 text-yellow-600 mr-2" />
+                  <span className="text-yellow-800 font-medium">Empire Builder</span>
+                </div>
+              </div>
             </div>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Founder & CEO of Bujji Chat - Building the future of emotionally intelligent AI
-            </p>
-            <div className="flex justify-center gap-4">
-              {socialLinks.map((link, index) => (
-                <motion.a
-                  key={index}
-                  href={link.url}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="p-3 bg-white/10 backdrop-blur-lg rounded-xl hover:bg-white/20 transition-all duration-300"
-                >
-                  <link.icon className="w-6 h-6 text-blue-400" />
-                </motion.a>
-              ))}
+            
+            <div className="relative">
+              <div className="w-full h-96 bg-gradient-to-br from-orange-600 to-red-600 rounded-3xl shadow-2xl flex items-center justify-center">
+                <div className="text-center text-white">
+                  <Crown className="w-24 h-24 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold">King Srinivas Makam</h3>
+                  <p className="text-orange-100">Founder & Visionary</p>
+                </div>
+              </div>
+              <div className="absolute -top-4 -right-4 w-32 h-32 bg-yellow-400 rounded-full opacity-20"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-red-400 rounded-full opacity-20"></div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Founder Bio */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Meet the Visionary
-              </h2>
-              <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-                <p>
-                  King Srinivas is a visionary entrepreneur and AI enthusiast who believes in the power of 
-                  technology to enhance human potential. With over a decade of experience in AI research 
-                  and development, he has dedicated his career to creating AI systems that understand and 
-                  respond to human emotions.
-                </p>
-                <p>
-                  His journey began with a simple question: "What if AI could truly understand human emotions?" 
-                  This led to years of research, experimentation, and breakthroughs in emotional intelligence 
-                  algorithms that form the foundation of Bujji Chat.
-                </p>
-                <p>
-                  Today, King leads a team of world-class engineers, researchers, and designers who share 
-                  his vision of democratizing AI technology and making it accessible to everyone who dreams 
-                  of building their own empire.
-                </p>
-              </div>
-            </motion.div>
+      {/* Vision Quote */}
+      <section className="py-16 px-6 bg-gradient-to-r from-orange-600 to-red-600">
+        <div className="container mx-auto max-w-4xl text-center">
+          <Quote className="w-16 h-16 text-white/30 mx-auto mb-8" />
+          <blockquote className="text-3xl md:text-4xl font-bold text-white mb-8 leading-relaxed">
+            "AI is not just technology—it's the key to unlocking human potential. 
+            My vision is to make this power accessible to every business, 
+            every entrepreneur, every dreamer."
+          </blockquote>
+          <div className="text-xl text-orange-100">
+            — King Srinivas Makam, Founder of Bujji Empire
+          </div>
+        </div>
+      </section>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto flex items-center justify-center">
-                <span className="text-6xl font-bold text-white">KS</span>
+      {/* Personal Journey */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">The Journey</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From entrepreneur to AI visionary - the story behind Bujji Empire
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <BookOpen className="w-8 h-8 text-orange-600 mr-3" />
+                Early Vision
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Srinivas recognized early on that artificial intelligence would transform 
+                business operations. His vision was clear: create an ecosystem where AI 
+                tools are not just for tech giants, but accessible to businesses of all sizes.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Identified the AI accessibility gap",
+                  "Envisioned democratized AI solutions",
+                  "Focused on practical business applications",
+                  "Committed to user-friendly design"
+                ].map((point, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span className="text-gray-600">{point}</span>
+                  </div>
+                ))}
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-black px-4 py-2 rounded-full font-bold">
-                Founder & CEO
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <Lightbulb className="w-8 h-8 text-orange-600 mr-3" />
+                Innovation Philosophy
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                His approach combines cutting-edge technology with practical business needs. 
+                Every tool in the Bujji Empire ecosystem is designed with the end-user in mind, 
+                ensuring that powerful AI capabilities remain intuitive and actionable.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "User-centric AI development",
+                  "Practical over theoretical solutions",
+                  "Continuous innovation mindset",
+                  "Ethics-first approach to AI"
+                ].map((point, index) => (
+                  <div key={index} className="flex items-center">
+                    <Star className="w-5 h-5 text-yellow-500 mr-3" />
+                    <span className="text-gray-600">{point}</span>
+                  </div>
+                ))}
               </div>
-            </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Philosophy */}
+      <section className="py-16 px-6 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Leadership Philosophy</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              The principles that guide King Srinivas in building and leading Bujji Empire
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Target,
+                title: "Vision-Driven",
+                description: "Every decision is guided by the long-term vision of democratizing AI",
+                color: "from-blue-500 to-indigo-600"
+              },
+              {
+                icon: Users,
+                title: "People First",
+                description: "Believing that great technology comes from empowering great people",
+                color: "from-emerald-500 to-teal-600"
+              },
+              {
+                icon: Heart,
+                title: "Authentic Leadership",
+                description: "Leading with genuine care for customers, team, and community impact",
+                color: "from-red-500 to-pink-600"
+              },
+              {
+                icon: TrendingUp,
+                title: "Continuous Growth",
+                description: "Embracing challenges as opportunities for innovation and improvement",
+                color: "from-purple-500 to-violet-600"
+              },
+              {
+                icon: Globe,
+                title: "Global Impact",
+                description: "Thinking beyond borders to create solutions that benefit businesses worldwide",
+                color: "from-green-500 to-emerald-600"
+              },
+              {
+                icon: Crown,
+                title: "Excellence Standard",
+                description: "Setting the highest standards in product quality and customer experience",
+                color: "from-yellow-500 to-orange-600"
+              }
+            ].map((principle, index) => (
+              <div key={index} className="p-6 bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${principle.color} mb-4 shadow-lg`}>
+                  <principle.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{principle.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{principle.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Achievements */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Key Achievements
-            </h2>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8"
-              >
-                <achievement.icon className="w-12 h-12 text-blue-400 mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-4">{achievement.title}</h3>
-                <p className="text-gray-300">{achievement.description}</p>
-              </motion.div>
-            ))}
+      <section className="py-16 px-6 bg-gradient-to-r from-gray-900 to-orange-900">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Achievements</h2>
+            <p className="text-xl text-orange-100">Milestones in building the AI empire</p>
           </div>
-        </div>
-      </section>
-
-      {/* Vision */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Our Vision
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              To create a world where AI understands human emotions and helps people build their dreams
-            </p>
-          </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {vision.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8"
-              >
-                <item.icon className="w-12 h-12 text-blue-400 mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-gray-300">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Journey Timeline
-            </h2>
-          </motion.div>
-          
-          <div className="space-y-8">
-            {timeline.map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-              >
-                <div className="flex-1 bg-white/10 backdrop-blur-lg rounded-2xl p-8">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">{milestone.year}</div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{milestone.title}</h3>
-                  <p className="text-gray-300">{milestone.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { number: "500K+", label: "Users Empowered", icon: Users },
+              { number: "100+", label: "AI Tools Created", icon: TrendingUp },
+              { number: "150+", label: "Countries Reached", icon: Globe },
+              { number: "4+", label: "Years of Innovation", icon: Award }
+            ].map((achievement, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex p-4 bg-white/10 rounded-2xl mb-4">
+                  <achievement.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="hidden md:block w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-8"></div>
-              </motion.div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{achievement.number}</div>
+                <div className="text-orange-200">{achievement.label}</div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12"
-          >
-            <div className="text-center mb-8">
-              <Lightbulb className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
-              <h2 className="text-4xl font-bold text-white mb-6">Philosophy</h2>
-            </div>
-            <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-              <p>
-                "I believe that technology should serve humanity, not the other way around. AI has the 
-                potential to be the greatest tool humanity has ever created, but only if we build it with 
-                empathy, understanding, and a deep respect for human values."
-              </p>
-              <p>
-                "Every conversation with Bujji Chat is designed to be meaningful, helpful, and emotionally 
-                intelligent. We're not just building an AI - we're creating a companion that understands 
-                your dreams and helps you achieve them."
-              </p>
-              <p>
-                "The future belongs to those who can harness the power of AI while maintaining their 
-                humanity. My mission is to democratize this technology and make it accessible to everyone 
-                who dreams of building their own empire."
-              </p>
-            </div>
-            <div className="text-center mt-8">
-              <p className="text-blue-400 font-semibold">- King Srinivas</p>
-            </div>
-          </motion.div>
+      {/* Personal Message */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-3xl p-12 text-white text-center shadow-2xl">
+            <Crown className="w-16 h-16 mx-auto mb-6 text-yellow-400" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">A Personal Message</h2>
+            <p className="text-xl leading-relaxed text-orange-100 mb-8">
+              "Building Bujji Empire has been more than creating a business—it's been about 
+              realizing a dream to make AI accessible to everyone. Every tool we create, 
+              every feature we add, every user we serve brings us closer to a world where 
+              intelligent automation empowers human potential."
+            </p>
+            <p className="text-lg text-orange-100 mb-8">
+              "I invite you to join us on this journey. Together, we can build not just 
+              businesses, but the future itself."
+            </p>
+            <div className="text-2xl font-bold">— King Srinivas Makam</div>
+            <div className="text-orange-200">Founder & Visionary Leader</div>
+          </div>
         </div>
       </section>
 
-      {/* Contact */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Get in Touch
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Want to discuss AI, entrepreneurship, or the future of technology? Let's connect.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:king@bujjichat.com" className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-400 text-white font-bold rounded-xl hover:scale-105 transition flex items-center justify-center">
-                <Mail className="w-5 h-5 mr-2" />
-                Send Email
-              </a>
-              <a href="tel:+919876543210" className="px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-bold rounded-xl hover:bg-white/20 transition flex items-center justify-center">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
-              </a>
-            </div>
-          </motion.div>
+      {/* Connect Section */}
+      <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-orange-50">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Connect with the Vision
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Experience the AI empire that King Srinivas has built for you
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/services" 
+              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              Explore the Empire
+            </a>
+            <a 
+              href="/about" 
+              className="px-8 py-4 bg-white border-2 border-orange-600 text-orange-600 font-semibold rounded-2xl hover:bg-orange-600 hover:text-white transition-all duration-300"
+            >
+              Learn Our Story
+            </a>
+          </div>
         </div>
       </section>
     </div>
