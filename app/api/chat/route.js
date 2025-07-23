@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
-    const { message, type, chatbotId, context } = await request.json();
+    const { message, type, chatbotId, context = [] } = await request.json();
 
     // Real AI chat using OpenAI with context memory
     const systemPrompt = `You are an advanced AI assistant with the following capabilities:
